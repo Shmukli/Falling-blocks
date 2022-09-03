@@ -1,3 +1,3 @@
 # Tetris
-Tetris game based on SFML library.
+Tetris-like game based on SFML library.
 Work in progress.
