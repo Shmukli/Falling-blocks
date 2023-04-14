@@ -22,7 +22,7 @@ class GameBlock : public GameObject {
 
 
 
-  /* GameBlock operator=(const GameBlock& gb) const; */
+ 
   static std::vector<sf::Texture> *textures;
 
  private:
