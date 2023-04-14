@@ -9,35 +9,30 @@
 
 #define MAX_NUMBER_OF_ITEMS 5
 
-class Menu
-{
-public:
-    Menu(float width, float height, int index);
-    ~Menu();
+class Menu {
+ public:
+  Menu(float width, float height, int index);
+  ~Menu();
 
-   // sf::RenderWindow* getMenuWindow();
-   // bool isMenuWindowOpen();
+  void draw(sf::RenderWindow &window);
+  void MoveUp();
+  void MoveDown();
+  int GetPressedItem() { return selectedItemIndex; }
+  void initHistory();
+  void showHistory();
+  void initHistoryWindow(sf::Text &history);
 
-    void draw(sf::RenderWindow &window);
-    void MoveUp();
-    void MoveDown();
-    int GetPressedItem() { return selectedItemIndex; }
-    void initHistory();
-    void showHistory();
-    void initHistoryWindow(sf::Text& history);
+  void showHelp();
 
-    void showHelp();
+ private:
 
-private:
+  sf::Texture helpScreen;
 
-    sf::Texture helpScreen;
-
-    int selectedItemIndex;
-    sf::Font font;
-    sf::Text menu[MAX_NUMBER_OF_ITEMS];
-    sf::Text history;
-    std::string information;
-
+  int selectedItemIndex;
+  sf::Font font;
+  sf::Text menu[MAX_NUMBER_OF_ITEMS];
+  sf::Text history;
+  std::string information;
 
 };
 #endif //TETRIS_MENU_H

@@ -1,7 +1,7 @@
 #include "GameObject.h"
 
-sf::Vector2f object::GameObject::getVelocity(){
+sf::Vector2f object::GameObject::getVelocity() {
 
-    return this->Vel;
+  return this->Vel;
 
 }

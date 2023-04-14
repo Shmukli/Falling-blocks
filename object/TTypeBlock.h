@@ -4,15 +4,15 @@
 #define TETRIS_TTYPEBLOCK_H
 #include "GameBlock.h"
 namespace object {
-    class TTypeBlock : public object::GameBlock {
-    public:
-        TTypeBlock(sf::Vector2f scale);
+class TTypeBlock : public object::GameBlock {
+ public:
+  TTypeBlock(sf::Vector2f scale);
 
-        std::vector<object::GameBlock> getBlock();
+  std::vector<object::GameBlock> getBlock();
 
-    private:
+ private:
 
-        std::vector<object::GameBlock> t_block;
-    };
+  std::vector<object::GameBlock> t_block;
+};
 }
 #endif //TETRIS_TTYPEBLOCK_H

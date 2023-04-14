@@ -3,21 +3,17 @@
 #define TETRIS_COLLISION_H
 #include "../object/GameBlock.h"
 
-class Collision{
-public:
-    Collision();
-    ~Collision() = default;
+class Collision {
+ public:
+  Collision();
+  ~Collision() = default;
 
+  bool resolveObjectCollision(std::vector<object::GameBlock> &object1,
+                              std::vector<object::GameBlock> &object2);
 
-    bool resolveObjectCollision(std::vector<object::GameBlock>& object1,
-                                std::vector<object::GameBlock>& object2);
+ private:
 
-
-private:
-
-    bool collisionDetected;
-
-
+  bool collisionDetected;
 
 };
 
